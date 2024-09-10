@@ -12,6 +12,11 @@
 #
 # Questions:-
 # 1. Briefly describe the purposes of the registers, $t0, $t1, $t2, and $t3.
+#    $t0 stores the current character in 'str' at the index stored in $t1. 
+#    $t1 holds the index of which character the loop is at in 'str'.
+#    $t2 stores the count of occurrences of the specific character in 'str'.
+#    $t3 holds the specific character that we want to count the number of occurrences of.
+#
 # 2. Currently, the program is stuck in an infinite loop. Make use of 
 #    breakpoints to locate, and correct the error.
 
