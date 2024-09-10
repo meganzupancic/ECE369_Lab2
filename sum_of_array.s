@@ -7,7 +7,7 @@
 #
 # Insert your answers below each question:-
 # 1(a) What is the address location of the first element of the array, X.
-#$t0
+# $t0
 #
 # 1(b) What is the address location of the last element (element 7) of the array, X.
 #
