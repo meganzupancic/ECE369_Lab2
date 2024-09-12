@@ -13,10 +13,13 @@
 #      [10010020]
 #      
 # 2.   What are the values at location 'SUM' as the program executes?
-#      0, fffffffe, fffffffa, 1
+#      0, 1
+#      At the beginning 'SUM' is initialized to zero, but then it does not update again until after the loop when the running sum stored in $s1 is stored in 'SUM' as 1.
+#      Therefore, 'SUM' is only updating at the beginning and then at the end after the loop.
 #
 # 3.   Traverse the program in single-step mode. Write down the intermediate 
 #      values stored in register $s1 as the program progresses.
+#      0, fffffffe, fffffffa, 1
 #
 # 4.   What is the purpose of register $t0 in this program?
 #      $t0 temporarily holds the address of the current element.
