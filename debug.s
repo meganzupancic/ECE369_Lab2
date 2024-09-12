@@ -19,6 +19,7 @@
 #
 # 2. Currently, the program is stuck in an infinite loop. Make use of 
 #    breakpoints to locate, and correct the error.
+#    Changed the line "add $t1, $t2, 1" to "add $t1, $t1, 1"
 
 	.text
 
@@ -39,7 +40,7 @@ loop:
 
 con:	
 
-    add     $t1, $t2, 1	    # increase indexing register $t1
+    add     $t1, $t1, 1	    # increase indexing register $t1     #this is where fixed the error, changing the original line "add $t1, $t2, 1" to "add $t1, $t1, 1"
 	j       loop	       	# continues the loop
 
 strEnd:
