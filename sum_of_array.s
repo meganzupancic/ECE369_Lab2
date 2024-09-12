@@ -7,14 +7,13 @@
 #
 # Insert your answers below each question:-
 # 1(a) What is the address location of the first element of the array, X.
-#      Possibly just the address X, since X is the address of the 1st element in the array.
-#      The address location could be zero since it is the first address.
+#      [10010000] 
 #
 # 1(b) What is the address location of the last element (element 7) of the array, X.
-#      The address location could be 8 because it is at index 2 and all elements are stored as words.
-#
+#      [10010020]
+#      
 # 2.   What are the values at location 'SUM' as the program executes?
-#      0, -2, -6, 1
+#      0, fffffffe, fffffffa, 1
 #
 # 3.   Traverse the program in single-step mode. Write down the intermediate 
 #      values stored in register $s1 as the program progresses.
