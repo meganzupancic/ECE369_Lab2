@@ -7,10 +7,10 @@
 #
 # Insert your answers below each question:-
 # 1(a) What is the address location of the first element of the array, X.
-#      [10010000] 
+#      [10010004] 
 #
 # 1(b) What is the address location of the last element (element 7) of the array, X.
-#      [10010020]
+#      [1001000c]
 #      
 # 2.   What are the values at location 'SUM' as the program executes?
 #      0, 1
