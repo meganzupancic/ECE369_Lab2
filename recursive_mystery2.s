@@ -48,12 +48,14 @@ main:	addi	$sp, $sp, -4	# Make space on stack
 	li	$a0, 8
       li    $a2, 5		
 	jal	test		
-# What is the value of $v0 at this point? (v0)= _ _ _ _ _ _ _ _        #
+# What is the value of $v0 at this point? (v0)= 19 in hexadecimal (25 in decimal)       #
 	la	$a1, list1	
 	li	$a0, 13		
 	jal	test		
-# What is the value of $v0 at this point?	(v0) = _ _ _ _ _ _ _ _       #
-# What does this code compute? Your answer HERE: _ _ _ _ _ _ _ _ _ _ _ _ #
+# What is the value of $v0 at this point?	(v0) = 22 in hexadecimal (34 in decimal)      #
+# What does this code compute? Your answer HERE: 
+#						First the tomato function makes space for 8 words in the stack. Then the orange
+#					         function puts the values and their correspodning addressess into the stack.
 
 return:	
 li	$v0, 0		# Return value
