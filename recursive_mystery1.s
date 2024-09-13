@@ -9,7 +9,7 @@ addi	$sp, $sp, -8     # makes room for 2 words in the stack
 addi	$t0, $a0, -1     # store (a0 - 1) into $t0 (in main a0 is set to 9) 
 sw  	$t0, 0($sp)      # (a0 - 1) stored into the stack 
 sw  	$ra, 4($sp)      # the return address is stored in the stack
-bne 	$a0, $zero, orange   # if (a0 - 1) == 0, go to orange
+bne 	$a0, $zero, orange   # if (a0 - 1) =/= 0, go to orange
 li  	$v0, 0             
 addi	$sp, $sp, 8      # pop top 2 words off stack 
 jr 	$ra                  
