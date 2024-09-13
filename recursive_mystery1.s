@@ -14,7 +14,7 @@ li  	$v0, 0
 addi	$sp, $sp, 8      # pop top 2 words off stack 
 jr 	$ra                  
 orange:   
-move  $a0, $t0            
+move  $a0, $t0   # moves $t0 into $a0         
 jal   	tomato   # will loop back to tomato until a0 == 0
 lw    	$t0, 0($sp)  # 1st visit to this line: t0 = -1 (ffffffff)
 sll	$t1, $t0, 2  
@@ -40,4 +40,10 @@ li	$v0, 0			# Return value
 	jr 	$ra			# Return
 # Step through this code in your simulator and monitor the register values. 
 # What does the tomato function do?   
-# Write your answer HERE: the tomato function stores the first 9 addresses of the arrary into the stack #                
+# Write your answer HERE: The tomato function makes room for the first 9 elements of the array
+#                         into the stack. The orange function works with the tomato function by
+#		   	  helping the &t0 decrement by moving $a0-1 into $a0. 
+# 			  Then, the addresses and their corresponding values are put into the spaces 
+#                         that were created in the stack, where $t1 is the address and $t2 is the value.
+#      
+#
