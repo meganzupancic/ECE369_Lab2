@@ -53,9 +53,14 @@ main:	addi	$sp, $sp, -4	# Make space on stack
 	li	$a0, 13		
 	jal	test		
 # What is the value of $v0 at this point?	(v0) = 22 in hexadecimal (34 in decimal)      #
-# What does this code compute? Your answer HERE: 
-#						First the tomato function makes space for 8 words in the stack. Then the orange
-#					         function puts the values and their correspodning addressess into the stack.
+# What does this code compute? Your answer HERE: The loop goes through list2 first and does the following: 
+# First the tomato function makes space for 8 words in the stack. Then the orange
+# function puts the first 8 value from list2 and their correspodning addressess into the stack. Also in the orange function,
+# for each value, if the value >= 5 then it is added to a running sum in $v0. The same process then occurrs with list1, however, 
+# &a0 is now 13 which then causes tomato to create 13 spaces in the stack and orange then fills those spaces with every value and its 
+# corresponding address from list1 then the first 4 values and their corresponding address from list2, since list1 only has 9 values.
+# The sum in $v0 is calculated the same way. 
+# 
 
 return:	
 li	$v0, 0		# Return value
