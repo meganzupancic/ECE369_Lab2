@@ -197,8 +197,8 @@ test:
     addi    $sp, $sp, -4        # Make space on stack
     sw      $ra, 0($sp)         # Save return address
 
-    jal    minimum             # call 'minimum' function
-#    jal    MaxIndex            # call 'MaxIndex' function
+#    jal    minimum             # call 'minimum' function
+    jal    MaxIndex            # call 'MaxIndex' function
     jal    print_integer       # Jump to the routine that prints the index
    
 # Comment out minimum, MaxIndex and print_integer function calls and uncomment sort and 
