@@ -172,8 +172,8 @@ sloop:
     mul $t1, $t1, 4          # [$t1=4*$t1] Calculate offset for index n - 1
     add $t1, $t1, $a0        # [$t1=$t1+$a0] Calculate the address for V[n - 1]
     lw $t3, 0($t1)           # [$t3=V[$t1]] Load the value of memory address $t1 to $t3, $t3 = V[n - 1]
-    sw $t1, $t2              # [V[$t1]=$t2] Store V[n-1] to be V[MaxIndex]
-    sw $t0, $t3              # [V[$t0]=$t3] Store V[MaxIndex] to be the original V[n - 1]
+    sw $t1, 0($t2)           # [V[$t1]=$t2] Store V[n-1] to be V[MaxIndex]
+    sw $t0, 0($t3)           # [V[$t0]=$t3] Store V[MaxIndex] to be the original V[n - 1]
     addi $s0, $s0, -1        # [$s0=$s0-1] Len = Len - 1    
     # Your code ends
     j       sloop           # Jump back to sort loop
