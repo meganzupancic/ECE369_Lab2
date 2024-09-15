@@ -2,6 +2,7 @@
 # Max Score: 12 points
 #
 # Students: Megan Zupancic and Annie Thiel
+# Percent Effort: 50%, 50%
 #
 # minimum.s 
 # Finds the index of the smallest element in an integer array
