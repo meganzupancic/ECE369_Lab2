@@ -3,7 +3,7 @@
 #  Max Score: 5 points
 #
 # Students: Megan Zupancic, Annie Thiel
-#
+# Percent Effort: 50%, 50%
 #
 # Insert your answers below each question:-
 # 1(a) What is the address location of the first element of the array, X.
