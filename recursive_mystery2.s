@@ -2,6 +2,7 @@
 # Max Score: 12 points
 #
 # students: Megan Zupancic and Annie Thiel
+# Percent Effort: 50%, 50%
 #
 .data	
 list1:		.word		3, 9, -1, 0, 6, 5, -4, -7, -8,  
