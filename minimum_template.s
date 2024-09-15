@@ -98,6 +98,13 @@ done:
     jr      $ra
 
 #################### MaxIndex routine that prints the index of the max element in an array ########
+# This algorithm first finds the largest element in A[0]..A[n] and moves it to 
+# position n, then finds the largest element in A[0]..A[n-1] and puts that in position n-1, 
+# and so forth.
+# -Use  MIPS function MaxIndex from Task 1, which takes two arguments A and n, and returns 
+# the index of the largest element of A[0]..A[n]. The arguments and return values are passed 
+# in registers $a0, $a1 and $v0 respectively.
+# -Remember that integers are 32-bit, or 4-byte, MIPS quantities.
 .text
 .globl MaxIndex
 
