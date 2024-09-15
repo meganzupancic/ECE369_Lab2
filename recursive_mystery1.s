@@ -1,5 +1,8 @@
 # Exercise 3
 # Max Score: 12 points
+#
+# students: Megan Zupancic and Annie Thiel
+#
 .data	
 list1:		.word		3, 9, 1, 2, 6, 3, -4, -7, -8, 4, -2,  8, 7, 6
 .text 		# list1 is an array of integers storing the given sequence of values	 
