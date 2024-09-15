@@ -116,16 +116,16 @@ MaxIndex:
     add    $t3, $0, 0       # $t3 = 0
 
 max_loop:
-    bge    $t1, $a1, done   # i >= n ?
+    bge    $t1, $a1, max_done   # i >= n ?
     mul    $t2, $t1, 4      # $t2 = $t1 * 4
     add     $t2,$t2,$a0
     lw      $t2, 0($t2)     # $t2 = V[i]
-    ble     $t2,$t0,next    # V[i] <= max ?
+    ble     $t2,$t0,max_next    # V[i] <= max ?
     add     $t0,$t2,$0      # max = V[i]
     add     $t3,$t1,$0      # max_index = max
 max_next:
     addi    $t1,$t1,1       # i++
-    j       loop            # Loop back
+    j       max_loop            # Loop back
 max_done: 
     add     $v0,$t3,$0      # return max
     jr      $ra
