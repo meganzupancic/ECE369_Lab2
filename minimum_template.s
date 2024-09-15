@@ -1,7 +1,7 @@
 # Exercise 3
 # Max Score: 12 points
 #
-# Students: 
+# Students: Megan Zupancic and Annie Thiel
 #
 # minimum.s 
 # Finds the index of the smallest element in an integer array
