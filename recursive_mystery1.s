@@ -44,10 +44,29 @@ li	$v0, 0			# Return value
 	jr 	$ra			# Return
 # Step through this code in your simulator and monitor the register values. 
 # What does the tomato function do?   
-# Write your answer HERE: The tomato function makes room for the first 9 elements of the array
-#                         into the stack. The orange function works with the tomato function by
-#		   	  helping the &t0 decrement by moving $a0-1 into $a0. 
-# 			  Then, the addresses and their corresponding values are put into the spaces 
-#                         that were created in the stack, where $t1 is the address and $t2 is the value.
-#      
-#
+# Write your answer HERE: 
+
+#The tomato function first adjusts the stack pointer and decrements it by 8 because each word it 4 bytes long, so the stack pointer is pointing
+#two words down from the top of the stack.
+#One first iteration, t0 is stored as 8 (8 is the argument passed into the function stored in a1).
+#The content of t0 is now stored in the stack.
+#We then store the return address into the stack (this return address is the address after we call tomato from main). The address is stored with an offset 
+#of 4 so that it is above the value of t0 in the stack. It is at the very beginning of the stack.
+#Now, we will check if the value at a0 = 0; if it is not equal, the condition is satisfied so it jumps to the orange function.
+#Once in the orange function, the value at a0 will be stored in t0.
+#We will then call the tomato function again (and the address of the [lw] line is stored in ra)
+#We will then adjust the stack again by opening 2 new spaces.
+#Decrement t0 by 1.
+#Repeat this process of the tomato and orange function until a0 = 0 (it will iterate 9 times). Once this occurs, we DO NOT GO TO ORANGE, but rather 
+#continue in the tomato function.
+#We will then load the stack pointer upwards 2 words, which points to [lw] location and jump to that location.
+#0 is written into the t0 register.
+#t1 = t1*4 -> t1 now stores the address of the first element of the array (and the stack pointer is pointing to that first element).
+#The content of that address is read and the value is written into the t2 register.
+#v0 becomes 3 on the first iteration.
+#We now load the return address (which offsets 4 everytime we loop so that we can get to a new element in the array). AKA, the values that were stored 
+#in the stack that are decretments by 1 help us access the values in the array by multiplying number by 4 to find offset
+#Adjust the stack up by 2 words, so we go up the stack
+#v0 = v0 + t2 ... v0 is continually updated (it is the sum of the array) untill we get to the top of the stack.
+#Once we get to the top of the stack, we read the return address that jumps us back to the main function (because the return address in at the top of 
+#the stack which calls back to the main)
